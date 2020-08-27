@@ -13,6 +13,6 @@ RUN apt-get update && apt-get install --no-install-recommends -yq \
 WORKDIR /usr/src/app
 
 COPY ./start.sh .
-COPY ./.xinitrc .
+COPY ./.xinitrc /root
 
 CMD ["bash", "start.sh"]
