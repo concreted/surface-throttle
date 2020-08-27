@@ -1,0 +1,19 @@
+version: '2'
+services:
+  throttle:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: always
+    privileged: true
+    labels:
+      io.resin.features.kernel-modules: '1'
+      io.resin.features.firmware: '1'
+      io.resin.features.dbus: '1'
+      io.resin.features.supervisor-api: '1'
+      io.resin.features.resin-api: '1'
+    environment:
+      - CORES=0
+      - CPU_PERCENT=100
+      - THROTTLE_THRESHOLD=800000
+      - DEBUG=false
