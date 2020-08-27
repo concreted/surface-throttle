@@ -6,6 +6,8 @@ echo "Throttle threshold: $THROTTLE_THRESHOLD"
 
 stress-ng -c $CPUS -l $CPU_PERCENT &
 
+startx &
+
 while true;
 do
 	currentFreq=$(cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq)
