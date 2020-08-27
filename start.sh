@@ -25,7 +25,8 @@ do
 	fi
 	if [ "$currentFreq" -lt "$THROTTLE_THRESHOLD" ]; then
 		echo "==================== Throttle detected ====================="
-		echo "Current freq: $currentFreq"
+		echo "Current freq (hz): $currentFreq"
+		echo
 		echo "Last captured temperature before throttle started:"
 		echo "$lastSensors"
 		echo "============================================================"
